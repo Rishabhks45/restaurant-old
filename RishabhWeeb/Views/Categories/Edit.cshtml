@@ -1,0 +1,35 @@
+﻿@model RishabhWeeb.Models.Category
+<form method="post" asp-controller="Categories" asp-action="Edit">
+
+    <div class="container-fluid border p-4">
+        <fieldset style="text-align:center">
+            <legend class="text-primary"><h2>Edit Category</h2></legend>
+            @* <div asp-validation-summary="All" class="text-danger"></div> *@
+            <hr />
+            <table style="margin-left: 335px;">
+                <tr>
+                    <th><label asp-for="Name"></label></th>
+                    <th><input type="text" asp-for="Name"  class="form-control" /></th>
+                    @* <th><span asp-validation-for="Name" class="text-danger"></span></th> *@
+                </tr>
+                <tr>
+                    <th><label asp-for="DisplayOrder"></label></th>
+                    <th><input type="text" asp-for="DisplayOrder" class="form-control" /></th>
+                    @* <th><span asp-validation-for="DisplayOrder" class="text-danger"></span></th> *@
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </td>
+                    <td>
+                        <a class="btn btn-primary" asp-area="" asp-controller="Categories" asp-action="Index"><i class="bi bi-back"></i>&nbsp;Back To List</a>
+                    </td>
+                </tr>
+
+            </table>
+        </fieldset>
+    </div>
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+</form>
