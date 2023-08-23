@@ -4,6 +4,7 @@ namespace RishabhWeeb.Models
 {
     public class Category
     {
+//hello
         [Key]
         public int Id { get; set; }
         [Required(ErrorMessage ="Required")]
